@@ -1,0 +1,12 @@
+<div class="w-50 mx-auto mt-5">
+  <%= form_for @movie do |f| %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <div class="form-group d-flex justify-content-between align-items-center">
+      <%= f.label "Youtube URL:" %>
+      <%= f.text_field :movie_url, class: "form-control w-75" %>
+    </div>
+    <div class="text-center mt-3">
+      <%= f.submit "Share", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

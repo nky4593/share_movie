@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-between mt-5">
+  <div class="movie-embed w-50 me-5">
+    <%= embed(movie.embed_url) %>
+  </div>
+  <div class="movie-info">
+    <div class="movie-title">
+      <h5><%= movie.title %></h5>
+    </div>
+    <div class="movie-shared-by">
+      <span class="fw-bold">Shared by: </span>
+      <%= movie.user.email %>
+    </div>
+    <div class="movie-description">
+      <div class="fw-bold">Description: </div>
+      <%= movie.description %>
+    </div>
+  </div>
+</div>

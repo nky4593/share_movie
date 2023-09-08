@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: postgres
+  password: password
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: share_video_development
+
+test:
+  <<: *default
+  database: share_video_test
+
+production:
+  <<: *default
+  database: share_video_production
+  username: share_video
+  password: <%= ENV["SHARE_VIDEO_DATABASE_PASSWORD"] %>
